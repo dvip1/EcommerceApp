@@ -1,22 +1,34 @@
 import { NavLink } from "react-router-dom"
-
-let Form=()=>{
-    return(
-        <div className="form-parent flex justify-evenly  bg-white h-40v">
-<form>
-<div className="flex flex-col justify-evenly items-center h-full">
-<input type="email" className="border border-black" placeholder="Enter Your Email"></input>
-<input type="password" className="border border-black" placeholder="Password"></input>
-<input type="submit" value="Submit" className="cursor-pointer border border-black bg-red-700 text-white h-10 rounded-md  " ></input>
-</div>
-
-<div className="flex justify-center">
-    <p className="m-3">New here?</p>
-    <NavLink className="bg-red-700 text-white h-10 rounded-md cursor-pointer flex justify-center items-center" to="/signupform">Sign-Up</NavLink>
-</div>
-</form>
+//a form.jsx that sends email and password to server running on port 3000 on home route using axios
+import React, { useState } from "react"
+import axios from "axios"
+const Form = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post("http://localhost:3000/", { email, password })
+    }
+    
+    return (
+        <div>
+        <form onSubmit={handleSubmit}>
+            <input
+            type="text"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+            type="password"
+            placeholder="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Submit</button>
+        </form>
         </div>
     )
-}
-
+    }
 export default Form
