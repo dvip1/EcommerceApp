@@ -1,1 +1,9 @@
-node_modules
+# created by virtualenv automatically
+venv/
+bin/
+include/
+lib/
+local/
+share/
+client_secret_906434026734-09f937mmsoc1lin0o22gc9h6ftp46p6t.apps.googleusercontent.com.json/
+db.sqlite3
