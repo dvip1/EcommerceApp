@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.urls import path
 from .views import hello_world
-
+from .views import create_user
 urlpatterns = [
     path('api/hello/', hello_world),
+    path('api/create_user/', create_user),
 ]

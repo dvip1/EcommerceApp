@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tzmliasg@0sy8!^%o8jsmz^@8ha0wm73%9$j=-g!k&mn2@0uco
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = [    'http://localhost:5173',]
+CORS_ALLOWED_ORIGINS = ['http://localhost:5173',]
 
 # Application definition
 
@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+# https://docs.djangoproject.com/en/4.1/ref/settin      gs/#databases
 
 DATABASES = {
     'default': {
